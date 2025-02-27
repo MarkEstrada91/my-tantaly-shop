@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tantaly Affiliate Shop</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ff4444;
+        }
+        .selector {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        select {
+            background-color: #2a2a2a;
+            color: #ffffff;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            background-color: #2a2a2a;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #ffffff;
+        }
+        .product p {
+            font-size: 16px;
+            color: #bbbbbb;
+            margin: 5px 0;
+        }
+        .product button {
+            background-color: #ff4444;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .product button:hover {
+            background-color: #cc3333;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 12px;
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Tantaly Shop</h1>
+        <div class="selector">
+            <label for="country">Shop from your country: </label>
+            <select id="country" onchange="updateLinks()">
+                <option value="com">United States (tantaly.com)</option>
+                <option value="ca">Canada (tantaly.ca)</option>
+                <option value="co.uk">United Kingdom (tantaly.co.uk)</option>
+                <option value="de">Germany (tantaly.de)</option>
+                <option value="jp">Japan (tantaly.jp)</option>
+            </select>
+        </div>
+        <div class="product-grid">
+            <!-- Sex Doll Torsos -->
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Aurora 2.0">
+                <h3>Aurora 2.0</h3>
+                <p>$769.99</p>
+                <button class="buy-btn" data-base="aurora-2-0">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Britney 2.0">
+                <h3>Britney 2.0</h3>
+                <p>$399.99</p>
+                <button class="buy-btn" data-base="britney-2-0">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Candice 2.0">
+                <h3>Candice 2.0</h3>
+                <p>$479.99</p>
+                <button class="buy-btn" data-base="candice-2-0">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Channing">
+                <h3>Channing</h3>
+                <p>$499.99</p>
+                <button class="buy-btn" data-base="channing">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Daisy Pro">
+                <h3>Daisy Pro</h3>
+                <p>$499.99</p>
+                <button class="buy-btn" data-base="daisy-pro">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Dita">
+                <h3>Dita</h3>
+                <p>$199.99</p>
+                <button class="buy-btn" data-base="dita">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Eva">
+                <h3>Eva</h3>
+                <p>$299.99</p>
+                <button class="buy-btn" data-base="eva">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Grainne">
+                <h3>Grainne</h3>
+                <p>$599.99</p>
+                <button class="buy-btn" data-base="grainne">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Lana">
+                <h3>Lana</h3>
+                <p>$159.99</p>
+                <button class="buy-btn" data-base="lana">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Louise">
+                <h3>Louise</h3>
+                <p>$259.99</p>
+                <button class="buy-btn" data-base="louise">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Mia">
+                <h3>Mia</h3>
+                <p>$179.99</p>
+                <button class="buy-btn" data-base="mia">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Monica 2.0">
+                <h3>Monica 2.0</h3>
+                <p>$499.99</p>
+                <button class="buy-btn" data-base="monica-2-0">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Rosie">
+                <h3>Rosie</h3>
+                <p>$299.99</p>
+                <button class="buy-btn" data-base="rosie">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Scarlett 2.0">
+                <h3>Scarlett 2.0</h3>
+                <p>$499.99</p>
+                <button class="buy-btn" data-base="scarlett-2-0">Buy Now</button>
+            </div>
+            <!-- Accessories -->
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Suspension Kit">
+                <h3>Tantaly Suspension Kit</h3>
+                <p>$19.99</p>
+                <button class="buy-btn" data-base="tantaly-suspension-kit">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Sex Doll Stand">
+                <h3>Sex Doll Stand</h3>
+                <p>$59.99</p>
+                <button class="buy-btn" data-base="sex-doll-stand">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Tantaly Lube">
+                <h3>Tantaly Lube</h3>
+                <p>$11.99</p>
+                <button class="buy-btn" data-base="tantaly-lube">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Renewal Powder">
+                <h3>Tantaly Renewal Powder</h3>
+                <p>$11.99</p>
+                <button class="buy-btn" data-base="tantaly-renewal-powder">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Cleaning Kit">
+                <h3>Tantaly Cleaning Kit</h3>
+                <p>$19.99</p>
+                <button class="buy-btn" data-base="tantaly-cleaning-kit">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x300" alt="Absorbent Stick">
+                <h3>Absorbent Stick Set</h3>
+                <p>$9.99</p>
+                <button class="buy-btn" data-base="absorbent-stick-set">Buy Now</button>
+            </div>
+        </div>
+        <div class="footer">
+            <p>I’m an affiliate of Tantaly—all purchases are made securely on their site, and I may earn a commission.</p>
+        </div>
+    </div>
+
+    <script>
+        const affiliateCode = "?sca_ref=6143207.f2t23OsJxz";
+        const domains = {
+            "com": "https://www.tantaly.com",
+            "ca": "https://www.tantaly.ca",
+            "co.uk": "https://tantaly.co.uk",
+            "de": "https://www.tantaly.de",
+            "jp": "https://www.tantaly.jp"
+        };
+
+        function updateLinks() {
+            const selectedDomain = document.getElementById("country").value;
+            const baseUrl = domains[selectedDomain];
+            const buttons = document.querySelectorAll(".buy-btn");
+            buttons.forEach(button => {
+                const productSlug = button.getAttribute("data-base");
+                const fullUrl = `${baseUrl}/products/${productSlug}${affiliateCode}`;
+                button.onclick = () => window.open(fullUrl, "_blank");
+            });
+        }
+
+        // Set initial links on page load
+        window.onload = updateLinks;
+    </script>
+</body>
+</html>
